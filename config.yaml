@@ -1,0 +1,27 @@
+paths:
+  raw_data: "./raw_data/CMaps"
+  rnn_pipeline: "./pipelines/rnn_pipeline.py"
+  notebooks: "./notebooks"
+  src_data: "./src/data"
+  src_models: "./src/models"
+  src_transform: "./src/transform"
+  tests: "./tests"
+
+data:
+  sequence_length: 30
+  test_size: 0.2
+  random_state: 42
+
+model:
+  head_size: 64
+  num_heads: 4
+  ff_dim: 4
+  num_transformer_blocks: 4
+  mlp_units: [128]
+  dropout: 0.1
+  mlp_dropout: 0.1
+
+training:
+  learning_rate: 0.001
+  epochs: 100
+  batch_size: 32

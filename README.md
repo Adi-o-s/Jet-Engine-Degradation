@@ -1,6 +1,6 @@
 # Jet Engine Degradation Prediction
 
-![](docs/renato-boemer-jet-engine-data-rnn.jpeg)
+![](docs/jet-engine-data-rnn.jpeg)
 
 Prognostics and health management is an important topic in industry for predicting state of assets to avoid downtime and failures. This data set is the Kaggle version of the very well known public data set for asset degradation modeling from NASA. It includes Run-to-Failure simulated data from turbo fan jet engines.
 Engine degradation simulation was carried out using C-MAPSS. Four different were sets simulated under different combinations of operational conditions and fault modes. Records several sensor channels to characterize fault evolution. The data set was provided by the Prognostics CoE at NASA Ames.
@@ -10,7 +10,7 @@ The goal is to predict the remaining useful life (RUL) of turbo fan jet engines 
 
 ## Installation
 You can clone this repository using git:
-```$ git clone https://github.com/boemer00/jet-engine-degradation-prediction.git```
+```$ git clone https://github.com/Adi-o-s/Jet-Engine-Degradation.git```
 
 Then, donwload the dataset directly from [NASA's repository](https://data.nasa.gov/Aerospace/CMAPSS-Jet-Engine-Simulated-Data/ff5v-kuh6).
 

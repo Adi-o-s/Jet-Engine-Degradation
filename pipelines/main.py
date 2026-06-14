@@ -1,4 +1,10 @@
 import os
+import sys
+
+# Resolve project root so paths work regardless of where the script is run from
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(PROJECT_ROOT)
+
 import glob
 import yaml
 import argparse
@@ -8,9 +14,6 @@ from sklearn.metrics import mean_absolute_error
 from sklearn.model_selection import train_test_split
 from src.data.data_loading import load_train_data
 from src.transform.data_transformation import RULAdder, ConstantColumnDropper, SequenceCreator, DataScaler
-
-# Resolve project root so paths work regardless of where the script is run from
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Set seeds for reproducibility
 np.random.seed(42)

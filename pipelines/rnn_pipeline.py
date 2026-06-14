@@ -1,4 +1,10 @@
 import os
+import sys
+
+# Resolve project root so paths work regardless of where the script is run from
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(PROJECT_ROOT)
+
 import yaml
 import argparse
 import mlflow
@@ -38,6 +44,7 @@ batch_size = args.batch_size or config['training']['batch_size']
 
 # Set MLflow tracking directory. Defaults to a local ./mlruns directory and can
 # be overridden via the MLFLOW_DIR environment variable.
+os.environ['MLFLOW_ALLOW_FILE_STORE'] = 'true'
 MLFLOW_DIR = os.path.abspath(os.environ.get('MLFLOW_DIR', './mlruns'))
 mlflow.set_tracking_uri(f'file://{MLFLOW_DIR}')
 
